@@ -1025,7 +1025,8 @@ CREATE TABLE public.steps (
     app_url character varying,
     type character varying DEFAULT 'BasicStep'::character varying NOT NULL,
     app_link_text character varying,
-    custom_title character varying
+    custom_title character varying,
+    waiting_time integer DEFAULT 0
 );
 
 
@@ -1867,6 +1868,8 @@ ALTER TABLE ONLY upvs.form_template_related_documents
 ALTER TABLE ONLY upvs.submissions
     ADD CONSTRAINT submissions_pkey PRIMARY KEY (id);
 
+
+--
 -- Name: index_active_storage_attachments_on_blob_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -2434,6 +2437,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20221022143119'),
 ('20230325092744'),
 ('20230325095737'),
-('20230325151049');
+('20230325151049'),
+('20230627134435');
 
 
