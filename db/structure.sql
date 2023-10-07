@@ -1169,7 +1169,9 @@ CREATE TABLE public.user_steps (
     step_id bigint NOT NULL,
     status character varying NOT NULL,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    submitted_at date,
+    to_be_notified_at date
 );
 
 
@@ -2438,6 +2440,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230325092744'),
 ('20230325095737'),
 ('20230325151049'),
-('20230627134435');
+('20230627134435'),
+('20231007072828');
 
 
